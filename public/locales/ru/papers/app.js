@@ -3,6 +3,10 @@ const templates=[
   {title:'РАЗРЕШЕНИЕ',subtitle:'на законное ничегонеделание',verb:'Настоящим разрешается',body:'отложить несрочные дела, устроиться поудобнее и провести время без чувства вины.',stamp:'ОДОБРЕНО',issuer:'Департамент восстановления сил'},
   {title:'ДИПЛОМ',subtitle:'за выдающиеся опоздания',verb:'Торжественно награждается',body:'за уверенное владение фразой «уже выхожу» и независимый взгляд на расписание.',stamp:'ЗАСЛУЖЕНО',issuer:'Комитет свободного времени'},
   {title:'ОФИЦИАЛЬНАЯ ОТМАЗКА',subtitle:'по обстоятельствам непреодолимой лени',verb:'Освобождается от лишней суеты',body:'в связи с необходимостью посмотреть в окно, допить чай и немного подумать о вечном.',stamp:'ПРИНЯТО',issuer:'Бюро уважительных причин'},
+  {title:'СЕРТИФИКАТ',subtitle:'на заслуженный отдых',verb:'С удовольствием подтверждаем',body:'право отключить уведомления, выбрать любимое место и ничего никому не объяснять.',stamp:'ОТДЫХАТЬ',issuer:'Институт хороших пауз'},
+  {title:'НАГРАДА',subtitle:'за героический понедельник',verb:'С почестями награждается',body:'за мужество открыть календарь, ответить на письма и сохранить чувство юмора.',stamp:'ГЕРОЙ ДНЯ',issuer:'Академия маленьких побед'},
+  {title:'ПРОПУСК',subtitle:'в клуб любителей чая',verb:'Принимается в почётные участники',body:'за неизменную верность тёплой кружке, хорошей компании и неспешным разговорам.',stamp:'ПРИНЯТ',issuer:'Общество тёплых кружек'},
+  {title:'СВИДЕТЕЛЬСТВО',subtitle:'о выдающемся творческом подходе',verb:'С радостью отмечаем',body:'за умение находить необычные решения, задавать вопросы и пробовать ещё раз.',stamp:'ВДОХНОВЛЕНО',issuer:'Мастерская смелых идей'},
 ];
 export async function mount(){
   const draft=storage.get('paper-draft',{name:'',type:0,note:''});
@@ -15,7 +19,7 @@ export async function mount(){
     ctx.fillStyle='#fffdf4';ctx.fillRect(0,0,1000,1320);ctx.strokeStyle='#8c9279';ctx.lineWidth=2;ctx.strokeRect(42,42,916,1236);ctx.strokeRect(55,55,890,1210);
     ctx.textAlign='center';ctx.fillStyle='#5c6552';ctx.font='20px monospace';ctx.fillText('МИНУТА КЛУБ / БЮРО ОТМАЗОК',500,120);
     ctx.font='64px Georgia,serif';ctx.fillText('§',500,230);ctx.fillStyle='#252a27';
-    ctx.font=`bold ${type===2?42:70}px Georgia,serif`;ctx.fillText(t.title,500,340);
+    ctx.font=`bold ${t.title.length>15?42:t.title.length>11?54:70}px Georgia,serif`;ctx.fillText(t.title,500,340);
     ctx.font='italic 27px Georgia,serif';ctx.fillText(t.subtitle,500,395);
     ctx.font='25px Georgia,serif';ctx.fillText(t.verb,500,500);
     ctx.font='bold 42px Georgia,serif';wrapText(ctx,name,500,580,750,52,3);

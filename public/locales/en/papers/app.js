@@ -3,6 +3,10 @@ const templates=[
   {title:'PERMISSION',subtitle:'to do absolutely nothing',verb:'Permission is hereby granted to',body:'postpone non-urgent tasks, get comfortable, and enjoy some guilt-free time.',stamp:'APPROVED',issuer:'Department of Rest and Recovery'},
   {title:'CERTIFICATE',subtitle:'for outstanding lateness',verb:'Proudly presented to',body:'for mastery of ‘I am on my way’ and an independent approach to schedules.',stamp:'WELL EARNED',issuer:'Committee of Free Time'},
   {title:'OFFICIAL EXCUSE',subtitle:'due to irresistible laziness',verb:'Exempt from unnecessary fuss',body:'due to the need to look out of the window, finish a cup of tea, and ponder life.',stamp:'ACCEPTED',issuer:'Bureau of Excellent Reasons'},
+  {title:'CERTIFICATE',subtitle:'for a well-earned break',verb:'We are pleased to confirm',body:'the right to silence notifications, find a favorite spot, and owe nobody an explanation.',stamp:'TAKE A BREAK',issuer:'Institute of Good Breaks'},
+  {title:'AWARD',subtitle:'for a heroic Monday',verb:'Proudly awarded to',body:'for bravely opening the calendar, answering messages, and keeping a sense of humor.',stamp:'HERO OF THE DAY',issuer:'Academy of Small Victories'},
+  {title:'PASS',subtitle:'to the tea lovers club',verb:'Welcomed as an honorary member',body:'for unwavering loyalty to a warm mug, good company, and unhurried conversation.',stamp:'ADMITTED',issuer:'Society of Warm Mugs'},
+  {title:'CERTIFICATE OF MERIT',subtitle:'for an outstanding creative approach',verb:'We are delighted to recognize',body:'for finding unusual solutions, asking questions, and trying again.',stamp:'INSPIRED',issuer:'Workshop of Bold Ideas'},
 ];
 export async function mount(){
   const draft=storage.get('paper-draft',{name:'',type:0,note:''});
@@ -15,7 +19,7 @@ export async function mount(){
     ctx.fillStyle='#fffdf4';ctx.fillRect(0,0,1000,1320);ctx.strokeStyle='#8c9279';ctx.lineWidth=2;ctx.strokeRect(42,42,916,1236);ctx.strokeRect(55,55,890,1210);
     ctx.textAlign='center';ctx.fillStyle='#5c6552';ctx.font='20px monospace';ctx.fillText('MINUTE CLUB / EXCUSE BUREAU',500,120);
     ctx.font='64px Georgia,serif';ctx.fillText('§',500,230);ctx.fillStyle='#252a27';
-    ctx.font=`bold ${type===2?42:70}px Georgia,serif`;ctx.fillText(t.title,500,340);
+    ctx.font=`bold ${t.title.length>15?42:t.title.length>11?54:70}px Georgia,serif`;ctx.fillText(t.title,500,340);
     ctx.font='italic 27px Georgia,serif';ctx.fillText(t.subtitle,500,395);
     ctx.font='25px Georgia,serif';ctx.fillText(t.verb,500,500);
     ctx.font='bold 42px Georgia,serif';wrapText(ctx,name,500,580,750,52,3);

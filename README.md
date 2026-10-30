@@ -22,7 +22,7 @@ Turn a small excuse into a playful certificate worth sharing.
 
 ## Features
 
-- Three playful document templates
+- Seven playful document templates
 - Customize the name, note, and date
 - Live preview, local drafts, and PNG export
 
@@ -57,7 +57,7 @@ With Node.js 24+: `npm test` and `npm run check`.
 
 Upload the contents of `public/` to your static host. Absolute asset paths assume a domain root; a GitHub Pages project subpath requires adapting paths or using a custom domain. Certificate names and preferences stay on the device. Clearing site data removes drafts. Exported PNG files are created locally.
 
-Three playful document templates, live preview, name/note/date customization, local drafts, and PNG export. These documents have no legal validity.
+Seven playful document templates, live preview, name/note/date customization, local drafts, and PNG export. These documents have no legal validity.
 
 ---
 
