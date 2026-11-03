@@ -64,3 +64,10 @@ Seven playful document templates, live preview, name/note/date customization, lo
 [More by den9911](https://github.com/den9911) · [Report an issue](https://github.com/den9911/excuse-bureau/issues) · [LICENSE](LICENSE)
 
 The chosen issue date is saved with the local draft and survives reloads and language changes.
+
+
+## Recent improvements / Последние улучшения
+
+After a complete first online load, documents and PNG export work offline with both languages cached. Offline readiness appears in the footer; updates wait for this app’s tabs to close without forcing a reload. First offline visits and cleared/blocked storage cannot be guaranteed.
+
+После первой успешной загрузки документы и PNG-экспорт работают без сети на обоих языках. Статус показан внизу; обновление ждёт закрытия вкладок, не перезагружая черновик.

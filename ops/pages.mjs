@@ -1,3 +1,4 @@
+import {buildOffline} from './offline.mjs';
 import {cp, mkdir, readFile, readdir, rm, writeFile} from 'node:fs/promises';
 import {join, relative} from 'node:path';
 const repo = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? process.env.PAGES_REPO;
@@ -13,3 +14,5 @@ async function walk(dir){for(const entry of await readdir(dir,{withFileTypes:tru
 }}}
 await walk(out);await writeFile(join(out,'.nojekyll'),'');
 console.log(`Pages build at ${base}`);
+
+await buildOffline(out);

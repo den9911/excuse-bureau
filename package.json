@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "node ops/localize.mjs",
+    "build": "node ops/localize.mjs && node ops/offline.mjs public",
     "check": "node ops/check-static.mjs",
     "test": "node --test tests/*.test.mjs"
   }

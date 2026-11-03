@@ -21,6 +21,7 @@ export async function localize(root){
   for(const locale of ['en','ru']){
     for(const file of files){
       const name=relative(publicRoot,file).replaceAll('\\','/');
+      if(name==='sw.js')continue;
       if(!name.endsWith('.js')||['shared/boot.js','shared/preferences.js','shared/preferences-model.js','shared/settings.js'].includes(name))continue;
       let source=await readFile(file,'utf8');
       // API/media URLs and links stay stable. Only native module imports use locale paths.
