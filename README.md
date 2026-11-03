@@ -62,3 +62,5 @@ Seven playful document templates, live preview, name/note/date customization, lo
 ---
 
 [More by den9911](https://github.com/den9911) · [Report an issue](https://github.com/den9911/excuse-bureau/issues) · [LICENSE](LICENSE)
+
+The chosen issue date is saved with the local draft and survives reloads and language changes.

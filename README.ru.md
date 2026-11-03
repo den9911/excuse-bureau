@@ -70,3 +70,5 @@ npm run check
 ---
 
 [Другие проекты den9911](https://github.com/den9911) · [Сообщить о проблеме](https://github.com/den9911/excuse-bureau/issues) · [LICENSE](LICENSE)
+
+Выбранная дата выдачи сохраняется в локальном черновике при перезагрузке и смене языка.
